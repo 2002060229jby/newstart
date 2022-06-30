@@ -5,7 +5,7 @@ struct node{
     int x, y;
 };
 int main(){
-    // 双端队列
+    // 双端队列 
     // 他维护了一个内存表，所以内存空间不是连续的，但还支持连续访问
     deque<int> que;
     que.push_back(5);
