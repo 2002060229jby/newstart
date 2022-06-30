@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+  {
+    "name": "(gdb) Windows 上的 Bash 启动",
+    "type": "cppdbg",
+    "request": "launch",
+    "program": "输入程序名称，例如 ${workspaceFolder}/a.exe",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${fileDirname}",
+    "environment": [],
+    "externalConsole": false,
+    "pipeTransport": {
+      "debuggerPath": "/usr/bin/gdb",
+      "pipeProgram": "${env:windir}\\system32\\bash.exe",
+      "pipeArgs": ["-c"],
+      "pipeCwd": ""
+    },
+    "setupCommands": [
+        {
+            "description": "为 gdb 启用整齐打印",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        },
+        {
+            "description":  "将反汇编风格设置为 Intel",
+            "text": "-gdb-set disassembly-flavor intel",
+            "ignoreFailures": true
+        }
+    ]
+  },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "d:/KKB/1.领航就业班/5.高级数据结构/3.字符串匹配数据结构",
+      "environment": [],
+      "program": "d:/KKB/1.领航就业班/5.高级数据结构/3.字符串匹配数据结构/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "D:/Download/Appgallery/MSYS2 64bit/mingw64/bin/gdb.exe",
+      "console": "integratedTerminal",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
