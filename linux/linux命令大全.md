@@ -330,3 +330,10 @@ nvidia-smi 查看GPU使用情况
 
 
 top 查看cpu使用情况
+
+取别名：
+
+alias g++='g++ -std=c11'
+
+vim .vimrc letg:syntastic_cpp_compiler_options = '-std=c++11'
+
